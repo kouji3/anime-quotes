@@ -1,0 +1,156 @@
+/* General styles */
+body {
+    background-color: var(--background-color);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s;
+    position: relative; /* For absolute positioning of toggle button */
+}
+
+/* CSS variables for light and dark themes */
+:root {
+    --background-color: #f4f4f4;
+    --container-background-color: #ffffff;
+    --text-color: #333333;
+    --quote-text-color: #555555;
+    --button-background-color: #3498db;
+    --button-hover-color: #2980b9;
+    --favorites-button-color: #e74c3c;
+    --favorites-button-hover-color: #c0392b;
+}
+
+body.dark-theme {
+    --background-color: #1e1e1e;
+    --container-background-color: #2a2a2a;
+    --text-color: #f0f0f0;
+    --quote-text-color: #b5b5b5;
+    --button-background-color: #555555;
+    --button-hover-color: #777777;
+    --favorites-button-color: #ff4d4d;
+    --favorites-button-hover-color: #ff3b3b;
+}
+
+/* Container styles */
+.container {
+    width: 90%; /* Responsive percentage */
+    max-width: 700px; /* Limit width */
+    padding: 20px;
+    border-radius: 12px;
+    background-color: var(--container-background-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+/* Title styles */
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+/* Quote display styles */
+#quote-display {
+    margin-bottom: 20px;
+}
+
+#quote-text {
+    font-size: 24px;
+    color: var(--quote-text-color);
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+#quote-author, #quote-anime {
+    font-size: 18px;
+    color: var(--quote-text-color);
+}
+
+/* Button styles */
+button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    margin: 5px;
+    background-color: var(--button-background-color);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Icon button styles */
+.icon-button {
+    position: absolute;
+    top: 10px; /* Adjust position as needed */
+    right: 20px; /* Position at the top right corner of the body */
+    padding: 7px 0px;
+    padding-bottom: 9px;
+    width: 50px;
+    border-radius: 50%; /* Circular button */
+    background-color: #ccc; /* Gray background */
+    color: #333333; /* Dark color */
+    font-size: 24px; /* Icon size */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.icon-button:hover {
+    background-color: #999; /* Darker gray on hover */
+}
+
+/* Favorites container styles */
+#favorites-container {
+    background-color: var(--container-background-color);
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-height: 250px; /* Increase max height */
+    overflow-y: auto; /* Enable scrolling */
+    transition: background-color 0.3s;
+}
+
+#favorites-container h2 {
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+#favorites-list .quote-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+#favorites-list .quote-item:last-child {
+    border-bottom: none;
+}
+
+#favorites-list .quote-item p {
+    margin: 5px 0;
+}
+
+#favorites-list .quote-item button {
+    padding: 6px 12px;
+    border-radius: 5px;
+    background-color: var(--favorites-button-color);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#favorites-list .quote-item button:hover {
+    background-color: var(--favorites-button-hover-color);
+}
+
